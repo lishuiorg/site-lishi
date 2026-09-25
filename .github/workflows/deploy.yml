@@ -43,13 +43,20 @@ jobs:
           cache: npm
           cache-dependency-path: |
             site-lishi/package-lock.json
+            lishui-kit/package-lock.json
             lishui-history/package-lock.json
 
-      # 内容库的校验脚本要能解析到 lishui-kit，所以它也得装一次依赖。
+      # 底座自己的依赖也要装：它以 file: 链接进 node_modules，
+      # 而 Node 按链接的真实路径解析依赖，找不到就得往底座目录里找。
+      - name: 安装底座依赖
+        working-directory: lishui-kit
+        run: npm ci
+
       - name: 安装依赖
         working-directory: site-lishi
         run: npm ci
 
+      # 内容库的校验脚本要能解析到 lishui-kit，所以它也得装一次依赖。
       - name: 安装内容库依赖
         working-directory: lishui-history
         run: npm ci
