@@ -54,8 +54,15 @@ const schemaType = entry.type === 'place'
     dateModified: entry.updated,
     isPartOf: {
       '@type': 'WebSite',
+      '@id': `${ctx.site.origin}/#website`,
       name: lang === 'zh' ? ctx.site.name : ctx.site.nameEn,
       url: `${ctx.site.origin}${homePath}`,
+      isPartOf: {
+        '@type': 'WebSite',
+        '@id': `${ctx.site.portal}/#website`,
+        name: lang === 'zh' ? ctx.site.portalName : ctx.site.portalNameEn,
+        url: `${ctx.site.portal}${lang === 'en' ? '/en/' : '/'}`,
+      },
     },
     citation: (entry.sourcesResolved || []).map((src) => ({
       '@type': 'CreativeWork',

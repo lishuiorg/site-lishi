@@ -67,10 +67,17 @@ const rules = RULES[lang].map(([no, title, text]) => ({ no, title, text }));
   jsonLd={{
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${ctx.site.origin}/#website`,
     name: lang === 'zh' ? ctx.site.name : ctx.site.nameEn,
     url: `${ctx.site.origin}${homePath}`,
     inLanguage: lang === 'zh' ? 'zh-Hans' : 'en',
     description: ui.hero.lede,
+    isPartOf: {
+      '@type': 'WebSite',
+      '@id': `${ctx.site.portal}/#website`,
+      name: lang === 'zh' ? ctx.site.portalName : ctx.site.portalNameEn,
+      url: `${ctx.site.portal}${lang === 'en' ? '/en/' : '/'}`,
+    },
     potentialAction: {
       '@type': 'SearchAction',
       target: `${ctx.site.origin}${indexPath}#q={search_term_string}`,

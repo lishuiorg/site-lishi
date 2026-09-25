@@ -19,6 +19,7 @@ const { ui } = ctx;
 
 const text = SECTIONS[section][lang];
 const entries = ofSection(content.entries, lang, section).sort(byYear);
+const homePath = sectionPath('home', lang);
 
 const uniq = (fn) => [...new Set(entries.map(fn).filter(Boolean))];
 const dynasties = sortFilterValues(uniq((e) => e.time?.dynasty), 'dynasty', content);
@@ -59,6 +60,18 @@ const path = sectionPath(section, lang);
     description: text.lede,
     inLanguage: lang === 'zh' ? 'zh-Hans' : 'en',
     url: `${ctx.site.origin}${path}`,
+    isPartOf: {
+      '@type': 'WebSite',
+      '@id': `${ctx.site.origin}/#website`,
+      name: lang === 'zh' ? ctx.site.name : ctx.site.nameEn,
+      url: `${ctx.site.origin}${homePath}`,
+      isPartOf: {
+        '@type': 'WebSite',
+        '@id': `${ctx.site.portal}/#website`,
+        name: lang === 'zh' ? ctx.site.portalName : ctx.site.portalNameEn,
+        url: `${ctx.site.portal}${lang === 'en' ? '/en/' : '/'}`,
+      },
+    },
     hasPart: entries.map((entry) => ({
       '@type': entry.type === 'place' ? 'Place' : 'CreativeWork',
       name: entry.title,

@@ -61,6 +61,18 @@ const tables = [
     description: a.lede,
     inLanguage: lang === 'zh' ? 'zh-Hans' : 'en',
     url: `${ctx.site.origin}${sectionPath('about', lang)}`,
+    isPartOf: {
+      '@type': 'WebSite',
+      '@id': `${ctx.site.origin}/#website`,
+      name: lang === 'zh' ? ctx.site.name : ctx.site.nameEn,
+      url: `${ctx.site.origin}${sectionPath('home', lang)}`,
+      isPartOf: {
+        '@type': 'WebSite',
+        '@id': `${ctx.site.portal}/#website`,
+        name: lang === 'zh' ? ctx.site.portalName : ctx.site.portalNameEn,
+        url: `${ctx.site.portal}${lang === 'en' ? '/en/' : '/'}`,
+      },
+    },
   }}
 >
   <PageHead
