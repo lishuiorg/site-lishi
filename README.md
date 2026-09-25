@@ -25,7 +25,7 @@
 | `src/pages/sitemap.xml.js` | 站点地图，构建时从内容库枚举路由，中英同页互标 hreflang |
 | `src/views/` | 页面正文：首页、列表、详情、时间轴、索引、关于、404 |
 | `src/layouts/Base.astro` | 站点外壳：把站点常量、界面串、导航交给 kit 的 `Layout` |
-| `src/site/config.mjs` | 本站常量、六类内容、五期分期、板块说明、编纂凡例 |
+| `src/site/config.mjs` | 本站常量、六类内容、五期分期、板块说明、编纂凡例、列表页每页条数 |
 | `src/site/content.mjs` | 读内容库并套上本站规则（六类归属、分期、街镇筛选值） |
 | `src/site/context.mjs` | 渲染上下文，由 kit 的 `makeContext` 生成，页面共用 |
 | `src/i18n/ui.zh.json`、`ui.en.json` | 界面串。英文用 `: `、中文用 `：`（`labelSep`） |
@@ -54,6 +54,16 @@ npm run check        # 以上四步串起来，发布前跑这一条
 3. **附加校验**：`event` 必须有时间字段、古迹的文保级别与批次配套、年代落在置县至今区间等，由内容库的 `scripts/validate.mjs` 以 `extra` 回调注入 kit 的校验引擎。
 
 改样式、改组件、改双语路由规则，都去 `lishui-kit` 改；本站只填数据。
+
+## 列表页的筛选、查找与分页
+
+三个列表页（`/events/`、`/places/`、`/articles/` 及英文镜像）把全部条目一次渲染进页面，筛选、查找、分面计数与分页都在浏览器里跑，**不预生成第二份数据文件**：
+
+- 每页 24 条（`LIST_PAGE_SIZE`），条目数不超过一页时不显示分页条；
+- 筛选按钮右侧显示分面计数，计数为 0 的选项压暗；
+- 筛选与页码写进地址栏 hash（`#category=…&page=2`），可直接分享；语言切换时一并带过去。
+
+**时间轴与索引页不放分页条**：它们按期分组、要一次看全，分期计数也只该算全量而非当页。机制与 `data-*` 约定见 `lishui-kit/README.md` 的 `client/` 一节。
 
 ## 发布
 

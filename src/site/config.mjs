@@ -19,6 +19,9 @@ export const SITE = {
 /** 实体目录 → 实体类型；与内容库的目录名一致。 */
 export const TYPE_DIRS = { events: 'event', places: 'place', articles: 'article' };
 
+/** 列表页每页条数：卡片网格按 300px 起排，24 条正好是 4 列 × 6 行。 */
+export const LIST_PAGE_SIZE = 24;
+
 /* ---------- 六类内容 ---------- */
 
 export const CATEGORIES = [
@@ -92,6 +95,8 @@ export const CATEGORIES = [
 
 /* ---------- 时间分期 ---------- */
 
+/* 置县（591）之前分两段：史前（约公元前 2000 年以前）与先秦至六朝。
+   两段都带 before 上界，periodOf 先按 before 判、再按 from/to 判。 */
 export const PERIODS = [
   {
     key: 'pre',
@@ -99,6 +104,14 @@ export const PERIODS = [
     en: 'Prehistory',
     range: { zh: '置县之前', en: 'Before the county' },
     note: { zh: '年代为估算', en: 'Dates approximate' },
+    before: -2000,
+  },
+  {
+    key: 'xianqin',
+    zh: '先秦至六朝',
+    en: 'Pre-Qin and Six Dynasties',
+    range: { zh: '置县之前', en: 'Before the county' },
+    before: 591,
   },
   { key: 'suitang', zh: '隋唐', en: 'Sui and Tang', from: 591, to: 959, range: { zh: '591–959', en: '591–959' } },
   { key: 'songyuan', zh: '宋元', en: 'Song and Yuan', from: 960, to: 1367, range: { zh: '960–1367', en: '960–1367' } },

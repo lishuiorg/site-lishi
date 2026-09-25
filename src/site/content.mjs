@@ -53,7 +53,10 @@ function deriveCategory(entry) {
 export function periodOf(entry) {
   const t = entry.time;
   if (!t || typeof t.start !== 'number' || t.precision === 'unknown') return null;
-  if (t.start < 591) return PERIODS[0];
+  const before591 = PERIODS.filter((p) => typeof p.before === 'number');
+  for (const p of before591) {
+    if (t.start < p.before) return p;
+  }
   return PERIODS.find((p) => t.start >= p.from && t.start <= p.to) || PERIODS[PERIODS.length - 1];
 }
 

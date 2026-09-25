@@ -1,15 +1,16 @@
 ---
 /* 列表页：大事记 / 古迹 / 文章三个板块。
-   筛选与查找都在已生成的页面上跑，靠 data-* 属性与 kit 的 client/filter.js，
-   不生成第二份数据文件。 */
+   筛选、查找与分页都在已生成的页面上跑，靠 data-* 属性与 kit 的 client/filter.js，
+   不生成第二份数据文件。分页只在此处放分页条：时间轴与索引页按期分组，要一次看全。 */
 import Base from '../layouts/Base.astro';
 import PageHead from 'lishui-kit/astro/PageHead.astro';
 import FilterForm from 'lishui-kit/astro/FilterForm.astro';
 import CardGrid from 'lishui-kit/astro/CardGrid.astro';
+import Pagination from 'lishui-kit/astro/Pagination.astro';
 import { sectionPath } from 'lishui-kit/i18n/paths.mjs';
 import { ctxFor } from '../site/context.mjs';
 import { siteContent, ofSection, byYear, sortFilterValues } from '../site/content.mjs';
-import { CATEGORIES, SECTIONS } from '../site/config.mjs';
+import { CATEGORIES, SECTIONS, LIST_PAGE_SIZE } from '../site/config.mjs';
 
 const { lang, section } = Astro.props;
 const ctx = ctxFor(lang);
@@ -77,6 +78,7 @@ const path = sectionPath(section, lang);
     <div class="wrap">
       {groups.length > 0 && <FilterForm ui={ui} groups={groups} />}
       <CardGrid entries={entries} ctx={ctx} noresult={ui.list.noresult} empty={ui.list.empty} />
+      {entries.length > LIST_PAGE_SIZE && <Pagination ui={ui} pageSize={LIST_PAGE_SIZE} />}
     </div>
   </section>
 </Base>
