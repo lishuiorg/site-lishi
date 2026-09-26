@@ -1,6 +1,6 @@
 ---
 /* 详情页：条目正文、信息卡、目录、关联、来源。 */
-import Base from '../layouts/Base.astro';
+import Base from 'lishui-kit/astro/layouts/Base.astro';
 import InfoCard from 'lishui-kit/astro/InfoCard.astro';
 import TocNav from 'lishui-kit/astro/TocNav.astro';
 import RelatedNav from 'lishui-kit/astro/RelatedNav.astro';
@@ -37,6 +37,7 @@ const schemaType = entry.type === 'place'
 ---
 
 <Base
+  ctx={ctx}
   lang={lang}
   path={entry.path}
   title={entry.title}

@@ -1,6 +1,6 @@
 ---
 /* 索引页：全部条目按年代序总览，供「有没有写」的快速核对。 */
-import Base from '../layouts/Base.astro';
+import Base from 'lishui-kit/astro/layouts/Base.astro';
 import PageHead from 'lishui-kit/astro/PageHead.astro';
 import FilterForm from 'lishui-kit/astro/FilterForm.astro';
 import IndexTable from 'lishui-kit/astro/IndexTable.astro';
@@ -42,6 +42,7 @@ const filterGroups = cats.length > 0 ? [{
 ---
 
 <Base
+  ctx={ctx}
   lang={lang}
   path={sectionPath('index', lang)}
   title={ui.indexPage.title}

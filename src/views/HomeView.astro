@@ -1,6 +1,6 @@
 ---
 /* 首页：首屏、规模、六类内容、时间轴预览、最新更新、编纂凡例。 */
-import Base from '../layouts/Base.astro';
+import Base from 'lishui-kit/astro/layouts/Base.astro';
 import Hero from 'lishui-kit/astro/Hero.astro';
 import StatBar from 'lishui-kit/astro/StatBar.astro';
 import SectionHead from 'lishui-kit/astro/SectionHead.astro';
@@ -59,6 +59,7 @@ const rules = RULES[lang].map(([no, title, text]) => ({ no, title, text }));
 ---
 
 <Base
+  ctx={ctx}
   lang={lang}
   path={homePath}
   title={ui.hero.title}

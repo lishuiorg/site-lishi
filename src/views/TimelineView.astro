@@ -1,6 +1,6 @@
 ---
 /* 时间轴：按朝代分期的条目轴，只上有年份且精度可用的条目。 */
-import Base from '../layouts/Base.astro';
+import Base from 'lishui-kit/astro/layouts/Base.astro';
 import PageHead from 'lishui-kit/astro/PageHead.astro';
 import FilterForm from 'lishui-kit/astro/FilterForm.astro';
 import TimelinePeriods from 'lishui-kit/astro/TimelinePeriods.astro';
@@ -37,6 +37,7 @@ const indexPath = sectionPath('index', lang);
 ---
 
 <Base
+  ctx={ctx}
   lang={lang}
   path={sectionPath('timeline', lang)}
   title={ui.timeline.title}
