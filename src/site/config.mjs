@@ -2,6 +2,9 @@
  *
  * 六类内容、五期分期、三个板块的说明文字都只属于历史，放在站点层；
  * kit 只提供通用的设计系统、组件与译法，不认这套分类。
+ *
+ * ARCHIVE／RULES／LIST_PAGE_SIZE 三站一致，改为从 lishui-kit/site-defaults.mjs
+ * 再导出，View 的 import 语句不用改。
  */
 
 export const SITE = {
@@ -16,11 +19,8 @@ export const SITE = {
   contentUpdated: '',
 };
 
-/** 实体目录 → 实体类型；与内容库的目录名一致。 */
-export const TYPE_DIRS = { events: 'event', places: 'place', articles: 'article' };
-
-/** 列表页每页条数：卡片网格按 300px 起排，24 条正好是 4 列 × 6 行。 */
-export const LIST_PAGE_SIZE = 24;
+/** 列表页每页条数：三站一致，取自底座。 */
+export { LIST_PAGE_SIZE } from 'lishui-kit/site-defaults.mjs';
 
 /* ---------- 六类内容 ---------- */
 
@@ -161,38 +161,7 @@ export const SECTIONS = {
   },
 };
 
-/* ---------- 来源层归档方式 ---------- */
+/* ---------- 来源层归档方式与编纂凡例 ---------- */
 
-export const ARCHIVE = {
-  zh: {
-    fulltext: '全文或影印本归档',
-    'link-registered': '登记链接（有在线版本）',
-    'catalogued-only': '仅著录（未见在线版本）',
-    excerpt: '摘录卡（只记必要片段）',
-    link: '链接档案（政府页与名录）',
-  },
-  en: {
-    fulltext: 'Full text or scan archived',
-    'link-registered': 'Link registered (online copy exists)',
-    'catalogued-only': 'Catalogued only (no online copy seen)',
-    excerpt: 'Excerpt card (essential passages only)',
-    link: 'Link record (government pages and lists)',
-  },
-};
-
-/* ---------- 编纂凡例（首页） ---------- */
-
-export const RULES = {
-  zh: [
-    ['一', '无来源不入库', '每条条目引用的来源都必须在来源层存在对应卡片，且 <code>rights</code> 字段填明授权状态。无来源的事实不进入已发布状态。'],
-    ['二', '成果层自撰', '成果层文字一律自行撰写，不整段转录受版权保护的来源；旧志原文属公有领域，引用也标卷次页码。'],
-    ['三', '矛盾并列', '来源互相矛盾时并列呈现、各自标注，不做单方面取舍；传说保留「相传」字样，与史实分段。'],
-    ['四', '双语成对', '中英共用同一个条目 ID，英文稿放在 <code>content/en/</code> 的对称路径下。缺任一份，两份都不得发布。'],
-  ],
-  en: [
-    ['I', 'No source, no entry', 'Every source cited by an entry must exist as a card in the source layer with its <code>rights</code> status stated. Nothing without a source is published.'],
-    ['II', 'Written, not copied', 'Entry text is written here, not transcribed wholesale from copyrighted sources. Public-domain gazetteer passages are quoted by juan and page.'],
-    ['III', 'Disagreement shown', 'Where sources disagree they are set side by side, each attributed; tradition keeps its original wording and is kept apart from record.'],
-    ['IV', 'Paired languages', 'Chinese and English share one entry ID, with the English draft at the mirrored path under <code>content/en/</code>. If either is missing, neither may be published.'],
-  ],
-};
+/* 三站一致，取自底座。View 里 `import { ARCHIVE } from '../site/config.mjs'` 照旧可用。 */
+export { ARCHIVE, RULES } from 'lishui-kit/site-defaults.mjs';

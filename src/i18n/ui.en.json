@@ -1,36 +1,18 @@
 {
-  "lang": "en",
-  "langShort": "EN",
-  "langLabel": "Language",
-  "labelSep": ": ",
-  "skip": "Skip to main content",
   "nav": {
-    "home": "Home",
     "events": "Annals",
     "places": "Sites",
     "articles": "Articles",
-    "timeline": "Timeline",
-    "index": "Index",
-    "about": "About"
+    "timeline": "Timeline"
   },
-  "theme": {
-    "dark": "Switch to dark mode",
-    "light": "Switch to light mode"
-  },
-  "wordmark": { "sub": "Lishui · Nanjing" },
   "hero": {
     "eyebrow": "Lishui History · Lishui District, Nanjing, Jiangsu",
     "title": "The history of Lishui, written one entry at a time",
     "lede": "From the founding of the county in 591 CE to its reconstitution as a district in 2013; from annalistic gazetteer entries to the old bridges on the heritage list. Every entry carries its sources, marks what is uncertain, and appears in Chinese and English.",
-    "searchPlaceholder": "Search: county founding, Yanzhi River, Putang Bridge…",
-    "searchButton": "Search",
-    "searchHint": "Search runs on the index page, over every published entry on this site."
+    "searchPlaceholder": "Search: county founding, Yanzhi River, Putang Bridge…"
   },
   "stats": {
-    "entries": "Published entries",
-    "categories": "Content categories",
-    "dynasties": "Periods covered",
-    "sources": "Source records"
+    "dynasties": "Periods covered"
   },
   "home": {
     "categoriesTitle": "Six categories",
@@ -38,59 +20,15 @@
     "timelineTitle": "Timeline",
     "timelineNote": "Five dynastic periods, with entries earlier than the county listed separately.",
     "timelineOpen": "Open the full timeline",
-    "latestTitle": "Recently updated",
-    "latestNote": "Ordered by the updated field, six at most.",
-    "latestSeeAll": "See every entry",
-    "rulesTitle": "Editorial rules",
-    "rulesNote": "Four rules, enforced by the content repository's validation script before anything is stored.",
-    "browseAll": "Browse all"
+    "rulesNote": "Four rules, enforced by the content repository's validation script before anything is stored."
   },
   "list": {
-    "countUnit": "entries",
-    "filterCategory": "Category",
     "filterDynasty": "Period",
     "filterTown": "Town",
-    "filterTag": "Tag",
-    "filterAll": "All",
-    "clear": "Clear filters",
-    "pager": "Pagination",
-    "pagerInfo": "Entries {from}–{to} of {total}",
-    "pagerPrev": "Previous",
-    "pagerNext": "Next",
-    "pagerPage": "Page {n}",
-    "search": "Search all entries",
-    "noresult": "No entry matches the current filters.",
-    "townNote": "Towns are read from each entry's address field; entries without an address are not filtered by this.",
-    "empty": "No published entries in this category yet."
+    "townNote": "Towns are read from each entry's address field; entries without an address are not filtered by this."
   },
   "detail": {
-    "toc": "On this page",
-    "info": "Details",
-    "type": "Type",
-    "category": "Category",
-    "time": "Date",
-    "dynasty": "Period",
-    "era": "Era name",
-    "precision": "Precision",
-    "approx": "c.",
-    "depth": "Depth",
-    "confidence": "Confidence",
-    "updated": "Updated",
-    "protection": "Protection",
-    "protectionBatch": "Listing",
-    "address": "Location",
-    "placeType": "Kind of site",
-    "genre": "Genre",
-    "outcome": "Outcome",
-    "related": "Related entries",
-    "places": "Places",
-    "sources": "Sources",
-    "sourceLocator": "Reference",
-    "sourceAccessed": "Accessed",
-    "sourceRights": "Rights",
-    "backToList": "Back to the list",
-    "license": "The text of this entry is licensed CC BY 4.0; please credit the source when reusing it.",
-    "unverified": "This entry has not yet been checked against its sources by a second person."
+    "placeType": "Kind of site"
   },
   "timeline": {
     "title": "Timeline",
@@ -103,64 +41,18 @@
     "spanTo": "to"
   },
   "indexPage": {
-    "title": "Index",
-    "lede": "Every entry in chronological order, for a quick check of what has and has not been written. Entries without a year come last.",
-    "colYear": "Year",
-    "colEntry": "Entry",
-    "colType": "Type",
-    "colCategory": "Category",
-    "colDepth": "Depth",
-    "noTime": "No year"
+    "lede": "Every entry in chronological order, for a quick check of what has and has not been written. Entries without a year come last."
   },
   "about": {
-    "title": "About this site",
     "lede": "Lishui History is the first sub-site of A Place Called Lishui. It covers the administrative history of Lishui District, its annals, its heritage sites, its archaeological discoveries, selections from the old gazetteers and its modern history.",
-    "scopeTitle": "Scope",
     "scopeBody": "Three entity types: events, places and articles. People are not given entries of their own; they are referenced from the biographical sub-site. Only published entries appear here, and nothing without a traceable source is published.",
-    "sourceTitle": "Sources",
     "sourceBody": "Sources are ranked: gazetteers and inscriptions; government pages and heritage lists; archaeological reports and academic papers; and site visits. Where sources disagree they are set side by side with each attributed, and no side is chosen; tradition and record are kept in separate sections, and traditions keep their original wording. Source records are catalogued in the language of the original: the publisher is given in English as well, while the rights note and the citation locator (juan, section, page) stay in the original language, so that a reader can find the passage in the source itself.",
-    "licenseTitle": "Licence",
-    "licenseBody": "The text of the entries is licensed CC BY 4.0: reuse and adaptation, including commercial use, require attribution only. The rights status of each source in the source layer is given in its own rights field and is not transferred by this licence.",
-    "bilingualTitle": "Languages and themes",
-    "bilingualBody": "Chinese is served from the root and English from /en/, with page paths matching one to one, so switching language keeps you on the same page. The theme follows your system setting by default and can be switched by hand; the choice is stored in your browser and does not flash on reload.",
-    "fixTitle": "Corrections",
     "fixBody": "If you find a factual error, a dead link or an inconsistent rendering of a proper name, open an issue in the network's repository, giving the entry ID and your evidence. Once checked, the entry is corrected and its updated field changed to that day.",
-    "gateTitle": "Validation",
     "gateBody": "Every entry passes the content repository's validation script before it is stored: required fields, controlled vocabularies, resolvable sources and relations, Chinese-English pairing and consistent proper names. Events must carry a date, and a heritage site that states a protection level must also state its listing.",
-    "techTitle": "How it is built",
-    "techBody": "The site is static. Markdown from the content repository is rendered at build time; there is no database and no client-side framework. The timeline, the filters, the search and the list paging all run on the generated pages.",
-    "statsTitle": "Current size",
-    "statsNote": "Counted at build time from the content repository; nothing here is maintained by hand.",
-    "sectionsTitle": "Entries by section",
-    "sectionsHead": "Section",
-    "catStatsTitle": "Entries by category",
-    "categoriesHead": "Category",
-    "rightsTitle": "Source layer by rights status",
-    "rightsHead": "Rights",
-    "archiveTitle": "Source layer by archive",
-    "archiveHead": "Archive"
+    "techBody": "The site is static. Markdown from the content repository is rendered at build time; there is no database and no client-side framework. The timeline, the filters, the search and the list paging all run on the generated pages."
   },
   "footer": {
-    "about": "Lishui History is one of the sub-sites of A Place Called Lishui. Entry text is licensed CC BY 4.0 and sources are recorded one by one.",
-    "portal": "Back to A Place Called Lishui",
-    "rights": "Entry text: CC BY 4.0",
-    "updated": "Content updated to"
+    "about": "Lishui History is one of the sub-sites of A Place Called Lishui. Entry text is licensed CC BY 4.0 and sources are recorded one by one."
   },
-  "type": { "event": "Event", "place": "Site", "article": "Article" },
-  "depth": { "stub": "Skeleton", "standard": "Standard", "full": "Long-form" },
-  "confidence": { "high": "High", "medium": "Qualified", "low": "Unconfirmed" },
-  "precision": { "year": "year", "decade": "decade", "century": "century", "unknown": "unknown" },
-  "rights": {
-    "public-domain": "Public domain",
-    "gov-open": "Government open information",
-    "excerpt-only": "Excerpt (copyrighted)",
-    "link-only": "Link only",
-    "permission-required": "Permission pending",
-    "unknown": "Rights unknown"
-  },
-  "notFound": {
-    "title": "No such page",
-    "lede": "The address may be wrong, or this entry is not online yet.",
-    "back": "Back to the home page"
-  }
+  "type": { "event": "Event", "place": "Site" }
 }
