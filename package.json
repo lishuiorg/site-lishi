@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "溧水历史志站点库。用 Astro 读取 lishui-history 内容库，生成静态站点，部署到 lishi.lishui.org。",
+  "description": "溧水历史站点库。用 Astro 读取 lishui-history 内容库，生成静态站点，部署到 lishi.lishui.org。",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

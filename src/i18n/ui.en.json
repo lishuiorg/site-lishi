@@ -114,7 +114,7 @@
   },
   "about": {
     "title": "About this site",
-    "lede": "Lishui History is the first sub-site of the Lishui knowledge network. It covers the administrative history of Lishui District, its annals, its heritage sites, its archaeological discoveries, selections from the old gazetteers and its modern history.",
+    "lede": "Lishui History is the first sub-site of A Place Called Lishui. It covers the administrative history of Lishui District, its annals, its heritage sites, its archaeological discoveries, selections from the old gazetteers and its modern history.",
     "scopeTitle": "Scope",
     "scopeBody": "Three entity types: events, places and articles. People are not given entries of their own; they are referenced from the biographical sub-site. Only published entries appear here, and nothing without a traceable source is published.",
     "sourceTitle": "Sources",
@@ -141,8 +141,8 @@
     "archiveHead": "Archive"
   },
   "footer": {
-    "about": "Lishui History is one of the sub-sites of the Lishui knowledge network. Entry text is licensed CC BY 4.0 and sources are recorded one by one.",
-    "portal": "Back to the Lishui Knowledge Portal",
+    "about": "Lishui History is one of the sub-sites of A Place Called Lishui. Entry text is licensed CC BY 4.0 and sources are recorded one by one.",
+    "portal": "Back to A Place Called Lishui",
     "rights": "Entry text: CC BY 4.0",
     "updated": "Content updated to"
   },

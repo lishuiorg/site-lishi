@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* 溧水历史志 · 站内链接自检
+/* 溧水历史 · 站内链接自检
  *
  * 实现由共享底座 lishui-kit 提供（validate/links.mjs），这里只定产物目录与退出码。
  *

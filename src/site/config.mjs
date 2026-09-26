@@ -1,18 +1,18 @@
 /* 站点常量与本站分类体系
  *
- * 六类内容、五期分期、三个板块的说明文字都只属于历史志，放在站点层；
+ * 六类内容、五期分期、三个板块的说明文字都只属于历史，放在站点层；
  * kit 只提供通用的设计系统、组件与译法，不认这套分类。
  */
 
 export const SITE = {
   id: 'lishui-history',
-  name: '溧水历史志',
+  name: '溧水历史',
   nameEn: 'Lishui History',
   host: 'lishi.lishui.org',
   origin: 'https://lishi.lishui.org',
   portal: 'https://lishui.org',
-  portalName: '溧水知识门户',
-  portalNameEn: 'Lishui Knowledge Portal',
+  portalName: '溧水一方',
+  portalNameEn: 'A Place Called Lishui',
   contentUpdated: '',
 };
 
